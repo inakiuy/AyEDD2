@@ -19,13 +19,14 @@ public class Vector {
     
     public Result BusquedaLineal(int srch) throws Exception{
         try {
-            for (int i = 0; i <= this.vector.length; i++){
+            for (int i = 0; i < this.vector.length; i++){
                 if (this.vector[i] == srch){
                 System.out.println("Iteraciones:" + i);
                 Result result = new Result(true, i);
                 return result;
                 }
             }
+            System.out.println("Iteraciones:" + this.vector.length);
             return new Result(false, this.vector.length);
         }
         catch (Exception e) {

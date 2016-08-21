@@ -35,8 +35,9 @@ public class VectorTest {
 
     /**
      * Test of BusquedaLineal method, of class Vector.
+     * @throws java.lang.Exception
      */
-    @Test (expected = Exception.class)
+    @Test
     public void testBusquedaLineal() throws Exception {
         System.out.println("BusquedaLineal - Vector OK");
         int srch1 = 0;

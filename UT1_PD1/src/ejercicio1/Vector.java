@@ -18,10 +18,43 @@ public class Vector {
     }
     
     public boolean BusquedaLineal(int srch){
-        throw new UnsupportedOperationException("Not supported yet.");
+        try {
+            for (int i = 0; i <= this.vector.length; i++){
+                if (this.vector[i] == srch){
+                System.out.println("Iteraciones:" + i);
+                return true;
+                }
+            }
+            return false;
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+            throw  e;
+        }        
     }
     
     public boolean BusquedaBinaria(int srch){
-        throw new UnsupportedOperationException("Not supported yet.");
+        int i = 0;
+        int j = this.vector.length - 1;
+        int iteration = 0;
+        while ( (j - i) >= 0 ){
+            iteration += 1;
+            int range = j - i;
+            int center = i + (range/2);
+            if ( this.vector[center] == srch ){
+                System.out.println("Iteraciones:" + iteration);
+                return true;
+            }
+            if ( this.vector[center] > srch ){
+                j = center - 1;
+                continue;
+            }
+            else {
+                i = center + 1;
+                continue;
+            }           
+        }
+        System.out.println("Iteraciones:" + iteration);
+        return false;
     }
 }

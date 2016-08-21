@@ -17,5 +17,11 @@ public class Vector {
         this.vector = vector;
     }
     
+    public boolean BusquedaLineal(int srch){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
+    public boolean BusquedaBinaria(int srch){
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

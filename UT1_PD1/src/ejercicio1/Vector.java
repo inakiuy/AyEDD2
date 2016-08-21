@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ut1_pd1;
+package ejercicio1;
 
 /**
  *
  * @author Inaki
  */
-public class UT1_PD1 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Vector {
+    
+    private final int[] vector;
+    
+    public Vector(int[] vector){
+        this.vector = vector;
     }
+    
     
 }

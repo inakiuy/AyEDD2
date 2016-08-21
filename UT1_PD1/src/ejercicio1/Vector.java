@@ -17,7 +17,7 @@ public class Vector {
         this.vector = vector;
     }
     
-    public boolean BusquedaLineal(int srch){
+    public boolean BusquedaLineal(int srch) throws Exception{
         try {
             for (int i = 0; i <= this.vector.length; i++){
                 if (this.vector[i] == srch){
@@ -33,10 +33,19 @@ public class Vector {
         }        
     }
     
-    public boolean BusquedaBinaria(int srch){
+    public boolean BusquedaBinaria(int srch) throws Exception{
         int i = 0;
         int j = this.vector.length - 1;
         int iteration = 0;
+        
+        if (this.vector == null){
+            throw new Exception("Array nulo");
+        }
+        for (int k = 0; k < (this.vector.length - 1); k++){
+            if (!(this.vector[k] < this.vector[k+1])){
+                throw new Exception("Array desordenado");
+            }
+        }
         while ( (j - i) >= 0 ){
             iteration += 1;
             int range = j - i;

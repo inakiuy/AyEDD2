@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio1;
+package PD1;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
-import ut2.ManejadorArchivosGenerico;
+import PD1.ManejadorArchivosGenerico;
 
 /**
  *

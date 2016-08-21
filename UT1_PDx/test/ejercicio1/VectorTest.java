@@ -5,6 +5,8 @@
  */
 package ejercicio1;
 
+import PD1.Vector;
+import PD1.Result;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package ut2;
+package PD1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

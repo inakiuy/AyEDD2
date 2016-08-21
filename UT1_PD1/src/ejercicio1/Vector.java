@@ -17,15 +17,16 @@ public class Vector {
         this.vector = vector;
     }
     
-    public boolean BusquedaLineal(int srch) throws Exception{
+    public Result BusquedaLineal(int srch) throws Exception{
         try {
             for (int i = 0; i <= this.vector.length; i++){
                 if (this.vector[i] == srch){
                 System.out.println("Iteraciones:" + i);
-                return true;
+                Result result = new Result(true, i);
+                return result;
                 }
             }
-            return false;
+            return new Result(false, this.vector.length);
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
@@ -33,7 +34,7 @@ public class Vector {
         }        
     }
     
-    public boolean BusquedaBinaria(int srch) throws Exception{
+    public Result BusquedaBinaria(int srch) throws Exception{
         int i = 0;
         int j = this.vector.length - 1;
         int iteration = 0;
@@ -52,7 +53,7 @@ public class Vector {
             int center = i + (range/2);
             if ( this.vector[center] == srch ){
                 System.out.println("Iteraciones:" + iteration);
-                return true;
+                return new Result(true, iteration);
             }
             if ( this.vector[center] > srch ){
                 j = center - 1;
@@ -64,6 +65,6 @@ public class Vector {
             }           
         }
         System.out.println("Iteraciones:" + iteration);
-        return false;
+        return new Result(false, iteration);
     }
 }

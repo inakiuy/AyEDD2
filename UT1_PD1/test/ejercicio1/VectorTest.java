@@ -41,27 +41,25 @@ public class VectorTest {
         System.out.println("BusquedaLineal - Vector OK");
         int srch1 = 0;
         Vector instance1 = new Vector(v1_OK);
-        boolean expResult1 = true;
-        boolean result1 = instance1.BusquedaLineal(srch1);
-        assertEquals(expResult1, result1);
+        Result result1 = instance1.BusquedaLineal(srch1);
+        assertTrue(result1.isFindResult());
                 
         System.out.println("BusquedaLineal - Vector OK - Busqueda no exitosa");
         int srch4 = 11;
         Vector instance4 = new Vector(v1_OK);
-        boolean result4 = instance4.BusquedaLineal(srch4);
-        assertFalse(result4);
+        Result result4 = instance4.BusquedaLineal(srch4);
+        assertFalse(result4.isFindResult());
         
         System.out.println("BusquedaLineal - Vector Desordenado");
         int srch2 = 5;
         Vector instance2 = new Vector(v2_ERR_Order);
-        boolean expResult2 = true;
-        boolean result2 = instance2.BusquedaLineal(srch2);
-        assertEquals(expResult2, result2);
+        Result result2 = instance2.BusquedaLineal(srch2);
+        assertTrue(result2.isFindResult());
         
         System.out.println("BusquedaLineal - Vector no inicializado");
         int srch3 = 5;
         Vector instance3 = new Vector(v3_ERR_Null);
-        boolean result3 = instance3.BusquedaLineal(srch3);
+        Result result3 = instance3.BusquedaLineal(srch3);
     }
 
     /**
@@ -72,32 +70,32 @@ public class VectorTest {
         System.out.println("BusquedaBinaria - Exitosa a la izquierda");
         int srch1 = 0;
         Vector instance1 = new Vector(v1_OK);
-        boolean result1 = instance1.BusquedaBinaria(srch1);
-        assertTrue(result1);
+        Result result1 = instance1.BusquedaBinaria(srch1);
+        assertTrue(result1.isFindResult());
         
         System.out.println("BusquedaBinaria - Exitosa a la derecha");
         int srch2 = 4;
-        boolean result2 = instance1.BusquedaBinaria(srch2);
-        assertTrue(result2);
+        Result result2 = instance1.BusquedaBinaria(srch2);
+        assertTrue(result2.isFindResult());
         
         System.out.println("BusquedaBinaria - Exitosa al medio");
         int srch3 = 2;
-        boolean result3 = instance1.BusquedaBinaria(srch3);
-        assertTrue(result3);
+        Result result3 = instance1.BusquedaBinaria(srch3);
+        assertTrue(result3.isFindResult());
         
         System.out.println("BusquedaBinaria - No exitosa");
         int srch4 = 11;
-        boolean result4 = instance1.BusquedaBinaria(srch4);
-        assertFalse(result4);
+        Result result4 = instance1.BusquedaBinaria(srch4);
+        assertFalse(result4.isFindResult());
         
 //        System.out.println("BusquedaBinaria - Array desordenado");
 //        Vector instance2 = new Vector(v2_ERR_Order);
 //        int srch5 = 5;
-//        boolean result5 = instance2.BusquedaBinaria(srch5);
+//        Result result5 = instance2.BusquedaBinaria(srch5);
         
         System.out.println("BusquedaBinaria - Array nulo");
         Vector instance3 = new Vector(v3_ERR_Null);
         int srch6 = 6;
-        boolean result6 = instance3.BusquedaBinaria(srch6);
+        Result result6 = instance3.BusquedaBinaria(srch6);
     } 
 }

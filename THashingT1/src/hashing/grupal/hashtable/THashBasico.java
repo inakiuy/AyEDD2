@@ -12,8 +12,13 @@ package hashing.grupal.hashtable;
 public class THashBasico implements IHash{
 
     @Override
-    public int calcularHash(String unaClave) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int calcularHash(String unaClave, int tableSize) {
+        int hashVal = 0;
+        
+        for (int i = 0; i < unaClave.length(); i++){
+            hashVal = (hashVal * 128 + unaClave.charAt(i) % tableSize);
+        }
+        return hashVal;
     }
     
 }

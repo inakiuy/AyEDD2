@@ -10,5 +10,5 @@ package hashing.grupal.hashtable;
  * @author Inaki
  */
 public interface IHash {
-    public int calcularHash(String unaClave);
+    public int calcularHash(String unaClave, int tableSize);
 }
